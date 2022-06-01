@@ -35,8 +35,10 @@ compinit
 export NODE_ENV="development"
 
 # zplug
-source ~/.zplug/init.zsh
-zplug load --verbose
+# source ~/.zplug/init.zsh
+# zplug load
+
+# p10k
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
