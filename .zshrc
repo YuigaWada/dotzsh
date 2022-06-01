@@ -44,11 +44,10 @@ source ~/powerlevel10k/powerlevel10k.zsh-theme
 ##### VERSION_MANAGER #####
 
 # pyenv
-export PYENV_ROOT="$HOME/.pyenv/shims"
-export PATH="$PYENV_ROOT:$PATH"
-export PIPENV_PYTHON="$PYENV_ROOT/versions/workspace/bin/python3"
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init --path)"
-eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
 
 # nvm (node version manager)
 export NVM_DIR="$HOME/.nvm"
