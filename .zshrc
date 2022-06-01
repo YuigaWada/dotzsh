@@ -64,14 +64,19 @@ case ${OSTYPE} in
     # pure alias
     alias code="open -a '/Applications/Visual Studio Code.app'"
     alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
     # utils
     alias notif='terminal-notifier -sound default -message'
     alias reptempdocx="cp -n /Users/yuigawada/Desktop/Report/template.docx ./ && echo 'success: Made a file ./template.doc !' || echo 'error: template.docx is already existed.'"
     alias reptemptex="cp -n /Users/yuigawada/Desktop/Report/template.tex ./ && echo 'success: Made a file ./template.tex !' || echo 'error: template.tex is already existed.'"
     alias reptemp="reptempdocx; reptemptex"
-    # Tex
+
+    # tex
     eval "$(/usr/libexec/path_helper)"
     export PATH=/usr/local/texlive/2022/bin/universal-darwin:$PATH
+
+    # brew
+    eval "$(/opt/homebrew/bin/brew shellenv)"
     
     ;;
   linux*) # for Linux
