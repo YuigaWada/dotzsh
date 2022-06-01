@@ -77,6 +77,8 @@ case ${OSTYPE} in
     ;;
   linux*) # for Linux
     
+    alias open="xdg-open"
+
     ;;
 esac
 
