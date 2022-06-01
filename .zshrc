@@ -15,7 +15,7 @@ fi
 ##### EXPORT #####
 
 # PATH
-export PATH
+export PATHaa
 export GOPATH="$HOME/go"
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
@@ -31,8 +31,6 @@ export EDITOR=emacs
 autoload -U compinit
 compinit
 
-# node
-export NODE_ENV="development"
 
 # zplug
 # source ~/.zplug/init.zsh
@@ -41,21 +39,6 @@ export NODE_ENV="development"
 # p10k
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-
-##### VERSION_MANAGER #####
-
-# pyenv
-export PYENV_ROOT=$HOME/.pyenv
-export PATH=$PYENV_ROOT/bin:$PATH
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
-
-# nvm (node version manager)
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
 
 
 ##### OS DEPENDENT #####
@@ -93,6 +76,24 @@ case ${OSTYPE} in
 
     ;;
 esac
+
+##### VERSION_MANAGER #####
+
+# pyenv
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init --path)"
+eval "$(pyenv virtualenv-init -)"
+eval "$(pyenv init -)"
+
+# nvm (node version manager)
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+# node
+export NODE_ENV="development"
+
 
 ##### ALIAS #####
 
