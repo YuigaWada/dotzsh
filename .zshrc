@@ -97,3 +97,6 @@ alias oh="open ./" # open here!
 alias vim=/usr/local/bin/vim
 alias vi=/usr/local/bin/vim
 alias rm='rm -i'
+
+# To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
+[[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
