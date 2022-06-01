@@ -7,9 +7,9 @@ if ! [ -f ~/.zshenv ]; then
     echo 'export ZDOTDIR=$HOME/.zsh' > ~/.zshenv
 fi
 
-if [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
+# if [ -f ~/.bashrc ]; then
+#     . ~/.bashrc
+# fi
 
 
 ##### EXPORT #####
@@ -77,7 +77,13 @@ case ${OSTYPE} in
     ;;
   linux*) # for Linux
     
+    #utils
     alias open="xdg-open"
+    
+    ## CUDA and cuDNN paths
+    export CUDA_HOME=/usr/local/cuda
+    export PATH=${CUDA_HOME}/bin:${PATH}
+    export LD_LIBRARY_PATH=${CUDA_HOME}/lib64:/usr/local/lib:${LD_LIBRARY_PATH}
 
     ;;
 esac

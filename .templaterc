@@ -1,0 +1,5 @@
+if ! [ -f ~/.zshenv ]; then
+    echo 'export ZDOTDIR=$HOME/.zsh' > ~/.zshenv
+fi
+
+. ~/.zsh/.zshrc

@@ -5,6 +5,9 @@ if [ "`whoami`" != "root" ]; then
   exit 1
 fi
 
+# zsh
+cp ~/.zsh/.templaterc ~/.zshrc
+
 # workspace
 if [ ! -d $HOME/workspace ]; then
     mkdir $HOME/workspace
