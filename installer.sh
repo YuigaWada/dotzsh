@@ -39,7 +39,9 @@ if [ ! -d $HOME/powerlevel10k ]; then
 fi
 
 # git
-cp $HOME/.zsh/.gitconfig $HOME/.gitconfig
+cd $HOME
+rm .gitconfig
+ln -s $HOME/.zsh/.gitconfig .gitconfig
 cd $HOME/workspace/$TEMP
 git clone https://github.com/holygeek/git-number
 cd git-number
