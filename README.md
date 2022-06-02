@@ -7,3 +7,11 @@
 - `installer.sh` 
     - installs some utils for terminal automatically.
     - usage: `sh installer.sh`
+
+## getting started
+
+0. `cd $HOME` 
+1. `git clone git@github.com:YuigaWada/dotzsh.git`
+2. `mv dotzsh .zsh`
+3. `cd .zsh`
+4. `sh installer.sh`
