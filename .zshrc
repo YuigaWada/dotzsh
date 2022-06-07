@@ -68,6 +68,7 @@ case ${OSTYPE} in
     
     #utils
     alias open="xdg-open"
+    alias targz="tar -I pigz -cf" # compress with pigz: targz [destination].tar.gz [source] (普通と逆なので注意)
     
     ## CUDA and cuDNN paths
     export CUDA_HOME=/usr/local/cuda
