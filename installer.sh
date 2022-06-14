@@ -47,6 +47,9 @@ git clone https://github.com/holygeek/git-number
 cd git-number
 sudo cp git-* /usr/local/bin
 
+# torch (for CUDA 11.1)
+cp $HOME/.zsh/torch_installer.sh $HOME/torch_installer.sh
+
 echo "\e[1;33m[TODO] If Terminator user. \n 1. Open Preferences using the context menu. \n\n 2.Under Profiles select the General tab (should be selected already), uncheck Use the system fixed width font (if not already) and select MesloLGS NF Regular. \n\n 3.Exit the Preferences dialog by clicking Close.\e[0m\n"
 rm -rf $HOME/workspace/$TEMP
 
