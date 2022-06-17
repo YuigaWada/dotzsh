@@ -14,6 +14,7 @@
 	rb = reset --soft HEAD^ # rollback
 	hrb = reset --hard # git hrb $HASH$ → $HASH$ までrollback
 	clr = checkout # clear
+	ch = checkout
 	nclr = number checkout 
 
 	com = !git commit -m
