@@ -55,6 +55,7 @@ case ${OSTYPE} in
     alias reptempdocx="cp -n /Users/yuigawada/Desktop/Report/template.docx ./ && echo 'success: Made a file ./template.doc !' || echo 'error: template.docx is already existed.'"
     alias reptemptex="cp -n /Users/yuigawada/Desktop/Report/template.tex ./ && echo 'success: Made a file ./template.tex !' || echo 'error: template.tex is already existed.'"
     alias reptemp="reptempdocx; reptemptex"
+    alias copy="pbcopy"
 
     # tex
     eval "$(/usr/libexec/path_helper)"
@@ -69,7 +70,8 @@ case ${OSTYPE} in
     #utils
     alias open="xdg-open"
     alias targz="tar -I pigz -cf" # compress with pigz: targz [destination].tar.gz [source] (普通と逆なので注意)
-    
+    alias copy="xclip -selection clipboard"
+
     ## CUDA and cuDNN paths
     export CUDA_HOME=/usr/local/cuda
     export PATH=${CUDA_HOME}/bin:${PATH}
