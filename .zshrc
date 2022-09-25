@@ -115,6 +115,7 @@ alias vi=/usr/local/bin/vim
 alias rm='rm -i'
 alias sucp="rsync -av --progress" # super cp
 alias pdb="python -m pdb -c c" # → https://yuiga.dev/blog/posts/%E3%82%B9%E3%83%88%E3%83%AC%E3%82%B9%E3%81%AA%E3%81%8Fpdb%E3%82%92%E4%BD%BF%E3%81%86%E6%96%B9%E6%B3%95
+alias unico="sed 's/\\\u\(....\)/\&#x\1;/g' | nkf --numchar-input -w" # to decode Unicode-escaped strings
 
 # To customize prompt, run `p10k configure` or edit ~/.zsh/.p10k.zsh.
 [[ ! -f ~/.zsh/.p10k.zsh ]] || source ~/.zsh/.p10k.zsh
