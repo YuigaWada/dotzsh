@@ -23,7 +23,7 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # OTHERS
 export EDITOR=emacs
-
+export LESSCHARSET=utf-8
 
 ##### ZSH #####
 
