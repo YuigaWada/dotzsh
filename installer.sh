@@ -38,6 +38,14 @@ if [ ! -d $HOME/powerlevel10k ]; then
     sudo cp -r $HOME/.zsh/powerlevel10k $HOME/powerlevel10k
 fi
 
+# tmux
+if [ ! -d $HOME/.tmux.conf ]; then
+    sudo apt update
+    sudo apt install tmux
+    cd ~/
+    ln -s $HOME/.zsh/.tmux.conf ./
+fi
+
 # git
 cd $HOME
 rm .gitconfig
