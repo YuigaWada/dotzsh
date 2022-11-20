@@ -56,6 +56,7 @@ case ${OSTYPE} in
     alias reptemptex="cp -n /Users/yuigawada/Desktop/Report/template.tex ./ && echo 'success: Made a file ./template.tex !' || echo 'error: template.tex is already existed.'"
     alias reptemp="reptempdocx; reptemptex"
     alias copy="pbcopy"
+    alias mosh="export LC_CTYPE='ja_JP.UTF-8'; mosh"
 
     # tex
     eval "$(/usr/libexec/path_helper)"
@@ -103,6 +104,7 @@ export NODE_ENV="development"
 # utils
 alias autopep="autopep8 --recursive --in-place --aggressive --aggressive ."
 alias cdf="sh ~/.zsh/cdf.sh"
+alias gccxd="g++ -std=c++17 -Wall -O2 -g -D_GLIBCXX_DEBUG"
 
 # alias
 alias python="python3"
