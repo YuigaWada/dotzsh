@@ -1,15 +1,32 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+dotfiles_dir=~/.zsh
+
+function check_dotfiles() {
+  echo -en "\e[1;32m[dotfiles] checking ...\e[m"
+  if is_dirty $? ; then
+      echo -e "\e[1;31m failed\e[m"
+      echo -e "\e[1;33m[warn] DIRTY DOTFILES\e[m"
+      echo -e "\e[1;33m    -> Push your local changes in $dotfiles_dir\e[m"
+  else
+      echo -e "\e[1;32m ok\e[m"
+  fi
+}
+
+function is_dirty() {
+  cd $dotfiles_dir
+  git status --porcelain | grep -q "^ M"
+}
+
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
+
+touch ~/.hushlogin
+unset MAILCHECK
+check_dotfiles
 
 if ! [ -f ~/.zshenv ]; then
     echo 'export ZDOTDIR=$HOME/.zsh' > ~/.zshenv
 fi
-
-# if [ -f ~/.bashrc ]; then
-#     . ~/.bashrc
-# fi
 
 
 ##### EXPORT #####
@@ -30,11 +47,6 @@ export LESSCHARSET=utf-8
 # zsh
 autoload -U compinit
 compinit
-
-
-# zplug
-# source ~/.zplug/init.zsh
-# zplug load
 
 # p10k
 source ~/powerlevel10k/powerlevel10k.zsh-theme
@@ -146,3 +158,6 @@ then
   bindkey "^D" _delete_or_detach
   bindkey "^W" _kill_current_session
 fi
+
+source ~/.zshrc
+echo -e "\e[1;32m[dotfiles] done\e[m"
