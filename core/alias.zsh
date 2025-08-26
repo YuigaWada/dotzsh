@@ -13,6 +13,9 @@ case ${OSTYPE} in
     alias reptemp="reptempdocx; reptemptex"
     alias copy="pbcopy"
     alias mosh="export LC_CTYPE='ja_JP.UTF-8'; mosh"
+    alias cmd="mise run"
+    alias m="mise run"
+    alias brew_arch="arch -arm64 /opt/homebrew/bin/brew"
 
     # tex
     eval "$(/usr/libexec/path_helper)"
