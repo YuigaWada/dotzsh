@@ -1,0 +1,108 @@
+# This is the configuration file for Ghostty.
+#
+# This template file has been automatically created at the following
+# path since Ghostty couldn't find any existing config files on your system:
+#
+#   /Users/yuigawada/Library/Application Support/com.mitchellh.ghostty/config
+#
+# The template does not set any default options, since Ghostty ships
+# with sensible defaults for all options. Users should only need to set
+# options that they want to change from the default.
+#
+# Run `ghostty +show-config --default --docs` to view a list of
+# all available config options and their default values.
+#
+# Additionally, each config option is also explained in detail
+# on Ghostty's website, at https://ghostty.org/docs/config.
+
+# Config syntax crash course
+# ==========================
+# # The config file consists of simple key-value pairs,
+# # separated by equals signs.
+# font-family = Iosevka
+# window-padding-x = 2
+#
+# # Spacing around the equals sign does not matter.
+# # All of these are identical:
+# key=value
+# key= value
+# key =value
+# key = value
+#
+# # Any line beginning with a # is a comment. It's not possible to put
+# # a comment after a config option, since it would be interpreted as a
+# # part of the value. For example, this will have a value of "#123abc":
+# background = #123abc
+#
+# # Empty values are used to reset config keys to default.
+# key =
+#
+# # Some config options have unique syntaxes for their value,
+# # which is explained in the docs for that config option.
+# # Just for example:
+# resize-overlay-duration = 4s 200ms
+keybind = cmd+a=text:\x01
+keybind = cmd+b=text:\x02
+keybind = cmd+c=text:\x03
+keybind = cmd+d=text:\x04
+keybind = cmd+e=text:\x05
+keybind = cmd+f=text:\x06
+keybind = cmd+g=text:\x07
+keybind = cmd+h=text:\x08
+keybind = cmd+i=text:\x09
+keybind = cmd+j=text:\x0A
+keybind = cmd+k=text:\x0B
+keybind = cmd+l=text:\x0C
+keybind = cmd+m=text:\x0D
+keybind = cmd+n=text:\x0E
+keybind = cmd+o=text:\x0F
+keybind = cmd+p=text:\x10
+keybind = cmd+r=text:\x12
+keybind = cmd+s=text:\x13
+keybind = cmd+u=text:\x15
+keybind = cmd+v=text:\x16
+keybind = cmd+x=text:\x18
+keybind = cmd+y=text:\x19
+keybind = cmd+z=text:\x1A
+
+keybind = cmd+up=text:\x1B[A
+keybind = cmd+down=text:\x1B[B
+keybind = cmd+right=text:\x1B[C
+keybind = cmd+left=text:\x1B[D
+keybind = cmd+home=text:\x1B[H
+keybind = cmd+end=text:\x1B[F
+keybind = cmd+page_up=text:\x1B[5~
+keybind = cmd+page_down=text:\x1B[6~
+keybind = cmd+escape=text:\x1B
+keybind = cmd+enter=text:\x0D
+keybind = cmd+tab=text:\x09
+keybind = cmd+backspace=text:\x08
+
+keybind = cmd+f1=text:\x1B[11~
+keybind = cmd+f2=text:\x1B[12~
+keybind = cmd+f3=text:\x1B[13~
+keybind = cmd+f4=text:\x1B[14~
+keybind = cmd+f5=text:\x1B[15~
+keybind = cmd+f6=text:\x1B[17~
+keybind = cmd+f7=text:\x1B[18~
+keybind = cmd+f8=text:\x1B[19~
+keybind = cmd+f9=text:\x1B[20~
+keybind = cmd+f10=text:\x1B[21~
+keybind = cmd+f11=text:\x1B[23~
+keybind = cmd+f12=text:\x1B[24~
+
+keybind = ctrl+c=copy_to_clipboard
+keybind = ctrl+v=paste_from_clipboard
+
+keybind = alt+f=text:\x1bf
+keybind = alt+b=text:\x1bb
+keybind = alt+d=text:\x1bd
+
+macos-option-as-alt = left
+
+keybind = global:f12=toggle_visibility
+
+theme = catppuccin-frappe
+
+macos-icon = chalkboard
+macos-icon-frame = chrome
