@@ -1,46 +1,9 @@
-# This is the configuration file for Ghostty.
-#
-# This template file has been automatically created at the following
-# path since Ghostty couldn't find any existing config files on your system:
-#
-#   /Users/yuigawada/Library/Application Support/com.mitchellh.ghostty/config
-#
-# The template does not set any default options, since Ghostty ships
-# with sensible defaults for all options. Users should only need to set
-# options that they want to change from the default.
-#
-# Run `ghostty +show-config --default --docs` to view a list of
-# all available config options and their default values.
-#
-# Additionally, each config option is also explained in detail
-# on Ghostty's website, at https://ghostty.org/docs/config.
+# theme
+theme = catppuccin-frappe
+macos-icon = chalkboard
+macos-icon-frame = chrome
 
-# Config syntax crash course
-# ==========================
-# # The config file consists of simple key-value pairs,
-# # separated by equals signs.
-# font-family = Iosevka
-# window-padding-x = 2
-#
-# # Spacing around the equals sign does not matter.
-# # All of these are identical:
-# key=value
-# key= value
-# key =value
-# key = value
-#
-# # Any line beginning with a # is a comment. It's not possible to put
-# # a comment after a config option, since it would be interpreted as a
-# # part of the value. For example, this will have a value of "#123abc":
-# background = #123abc
-#
-# # Empty values are used to reset config keys to default.
-# key =
-#
-# # Some config options have unique syntaxes for their value,
-# # which is explained in the docs for that config option.
-# # Just for example:
-# resize-overlay-duration = 4s 200ms
+# cmd <--> ctrl 
 keybind = cmd+a=text:\x01
 keybind = cmd+b=text:\x02
 keybind = cmd+c=text:\x03
@@ -59,6 +22,7 @@ keybind = cmd+o=text:\x0F
 keybind = cmd+p=text:\x10
 keybind = cmd+r=text:\x12
 keybind = cmd+s=text:\x13
+keybind = cmd+t=text:\x14
 keybind = cmd+u=text:\x15
 keybind = cmd+v=text:\x16
 keybind = cmd+x=text:\x18
@@ -100,9 +64,33 @@ keybind = alt+d=text:\x1bd
 
 macos-option-as-alt = left
 
+# visibility
 keybind = global:f12=toggle_visibility
+keybind = global:f11=toggle_quick_terminal
+keybind = "ctrl+f=text:\x03"
 
-theme = catppuccin-frappe
+# for tmux
 
-macos-icon = chalkboard
-macos-icon-frame = chrome
+# Cmd+T → tmux: Ctrl+T のあとに c（新規ウィンドウ）
+keybind = cmd+t=text:\x14c
+
+# Cmd+W → tmux: Ctrl+T->&
+keybind = cmd+w=text:\x14&
+# Cmd+D → tmux: Ctrl+T->%
+keybind = cmd+d=text:\x14%
+# Cmd+Shift+D → tmux: Ctrl+T->"
+keybind = cmd+shift+d=text:\x14\"
+
+# Cmd+1/2/3 → tmux: Ctrl+T->1/2/3
+keybind = cmd+1=text:\x141
+keybind = cmd+2=text:\x142
+keybind = cmd+3=text:\x143
+
+# Cmd+F → tmux: Ctrl+T->/
+keybind = cmd+f=text:\x14/
+
+# ctrl+[ → tmux: Ctrl+T->p
+keybind = cmd+shift+left_bracket=text:\x14p
+
+# ctrl+] → tmux: Ctrl+T->n
+keybind = cmd+shift+right_bracket=text:\x14n
