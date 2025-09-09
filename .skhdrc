@@ -1,0 +1,3 @@
+alt - x : yabai -m window --focus stack.prev
+alt - c : yabai -m window --focus stack.next
+alt - z : bash ~/.zsh/move_utils.sh
