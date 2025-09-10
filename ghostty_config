@@ -77,9 +77,9 @@ keybind = cmd+t=text:\x14c
 # Cmd+W → tmux: Ctrl+T->&
 keybind = cmd+w=text:\x14&
 # Cmd+D → tmux: Ctrl+T->%
-keybind = cmd+d=text:\x14%
+keybind = cmd+shift+t=text:\x14%
 # Cmd+Shift+D → tmux: Ctrl+T->"
-keybind = cmd+shift+d=text:\x14\"
+keybind = cmd+shift+y=text:\x14\"
 
 # Cmd+1/2/3 → tmux: Ctrl+T->1/2/3
 keybind = cmd+1=text:\x141
@@ -94,3 +94,13 @@ keybind = cmd+shift+left_bracket=text:\x14p
 
 # ctrl+] → tmux: Ctrl+T->n
 keybind = cmd+shift+right_bracket=text:\x14n
+
+# Ctrl+Shift+↑ → tmux: Ctrl-t ↑
+keybind = cmd+shift+right=text:\x14o
+
+# Ctrl+Shift+↓ → tmux: Ctrl-t ↓
+keybind = cmd+shift+left=text:\x14;
+
+
+window-width = 140
+window-height = 40
