@@ -1,12 +1,13 @@
 #!/usr/bin/env sh
 cur_layout="$(yabai -m query --spaces --space | jq -r '.type')"
+RCPATH="$HOME/.zsh/configs"
 
 if [ "$cur_layout" = "bsp" ]; then
-    rm -rf ~/.zsh/.yabairc
-    ln -s  ~/.zsh/.yabairc_stack  ~/.zsh/.yabairc
+    rm -rf $RCPATH/.yabairc
+    ln -s  $RCPATH/.yabairc_stack  $RCPATH/.yabairc
 else
-    rm -rf ~/.zsh/.yabairc
-    ln -s  ~/.zsh/.yabairc_bsp  ~/.zsh/.yabairc
+    rm -rf $RCPATH/.yabairc
+    ln -s  $RCPATH/.yabairc_bsp  $RCPATH/.yabairc
 fi
 
-source ~/.zsh/.yabairc
+source $RCPATH/.yabairc

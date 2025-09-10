@@ -1,7 +1,6 @@
-
 #### stack mode ####
 alt - z : bash ~/.zsh/move_utils.sh
-alt - v : bash ~/.zsh/toggle_yabai.sh
+alt - v : bash ~/.zsh/scripts/toggle_yabai.sh
 alt - x : if [ "$(yabai -m query --spaces --space | jq -r '.type')" = "bsp" ]; then yabai -m window --focus recent; else yabai -m window --focus stack.prev; fi
 alt - c : yabai -m window --focus stack.next
 
