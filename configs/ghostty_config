@@ -1,5 +1,5 @@
 # theme
-theme = catppuccin-frappe
+# theme = catppuccin-frappe
 macos-icon = chalkboard
 macos-icon-frame = chrome
 
@@ -28,6 +28,7 @@ keybind = cmd+v=text:\x16
 keybind = cmd+x=text:\x18
 keybind = cmd+y=text:\x19
 keybind = cmd+z=text:\x1A
+keybind = cmd+n=new_window
 
 keybind = cmd+up=text:\x1B[A
 keybind = cmd+down=text:\x1B[B
@@ -65,8 +66,9 @@ keybind = alt+d=text:\x1bd
 macos-option-as-alt = left
 
 # visibility
-keybind = global:f12=toggle_visibility
-keybind = global:f11=toggle_quick_terminal
+# keybind = global:f12=toggle_visibility
+keybind = global:shift+ctrl+d=toggle_visibility
+keybind = global:shift+cmd+d=toggle_quick_terminal
 keybind = "ctrl+f=text:\x03"
 
 # for tmux
@@ -79,7 +81,7 @@ keybind = cmd+w=text:\x14&
 # Cmd+D → tmux: Ctrl+T->%
 keybind = cmd+shift+t=text:\x14%
 # Cmd+Shift+D → tmux: Ctrl+T->"
-keybind = cmd+shift+y=text:\x14\"
+# keybind = cmd+shift+y=text:\x14\"
 
 # Cmd+1/2/3 → tmux: Ctrl+T->1/2/3
 keybind = cmd+1=text:\x141
